@@ -70,6 +70,19 @@ install {
                     developerConnection gitUrl
                     url siteUrl
                 }
+
+                dependencies {
+                    dependency{
+                        groupId 'com.fasterxml.jackson.core'
+                        artifactId 'jackson-databind'
+                        version '2.8.5'
+                    }
+                    dependency{
+                        groupId 'org.bouncycastle'
+                        artifactId 'bcprov-jdk15on'
+                        version '1.60'
+                    }
+                }
             }
         }
     }
