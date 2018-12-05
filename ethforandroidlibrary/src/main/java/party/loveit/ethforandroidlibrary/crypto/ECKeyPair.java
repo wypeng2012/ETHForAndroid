@@ -26,9 +26,15 @@ public class ECKeyPair {
     public BigInteger getPrivateKey() {
         return privateKey;
     }
+    public String getPrivateKeyToString() {
+        return Numeric.toHexStringWithPrefix(privateKey);
+    }
 
     public BigInteger getPublicKey() {
         return publicKey;
+    }
+    public String getPublicKeyToString() {
+        return Numeric.toHexStringWithPrefix(publicKey);
     }
 
     /**
