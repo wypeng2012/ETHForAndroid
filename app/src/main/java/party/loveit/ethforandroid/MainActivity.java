@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
                     BigInteger priKey = Bip44Utils.getPathPrivateKey(words, "m/44'/60'/0'/0/0");
 
                     ECKeyPair ecKeyPair = ECKeyPair.create(priKey);
-                    String publicKey = Numeric.toHexStringWithPrefix(ecKeyPair.getPublicKey());
+                    String publicKey = ecKeyPair.getPublicKeyToString();
                     Log.e("TAG", "publicKey: " + publicKey);
-                    String privateKey = Numeric.toHexStringWithPrefix(ecKeyPair.getPrivateKey());
+                    String privateKey = ecKeyPair.getPrivateKeyToString();
                     Log.e("TAG", "privateKey: " + privateKey);
                     String address = "0x" + Keys.getAddress(ecKeyPair);
                     Log.e("TAG", "address: " + address);
